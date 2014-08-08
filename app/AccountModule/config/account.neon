@@ -1,0 +1,7 @@
+services:
+	routerFactoryAcc: App\AccountModule\RouterFactory
+	routerFactory:
+		setup:
+			- register(@routerFactoryAcc)
+	topBar:
+	    implement: ITopBarControlFactory
