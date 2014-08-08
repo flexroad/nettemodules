@@ -13,26 +13,10 @@ class RouterFactory implements \IModularRouter
 	
 	public function createRouteList()
 	{
-	    
 		$router = new RouteList('Account');
 		
-		$router[] = new Route('<module>/<presenter>/<action>/<id>', array(
-		    'module' => array(
-			Route::FILTER_IN => function($module) {
-			    $search = array_search($module, $this->transaltionsModule);
-			    if (!$search){
-				return NULL;
-			    }
-			    $this->selectedModule = $module;
-			    return "Account";
-			},
-			Route::FILTER_OUT => function($module) {
-			    if ($module == "Account"){
-				return $this->selectedModule;
-			    }
-			    return NULL;
-			},
-		    ),
+		$router[] = new Route('account/<presenter>/<action>/<id>', array(
+		    'module' => 'Account',
 		    'presenter' => 'Home',
 		    'action' => 'default',
 		    'id' => NULL,

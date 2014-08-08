@@ -3,5 +3,5 @@ services:
 	routerFactory:
 		setup:
 			- register(@routerFactoryAcc)
-	topBar:
-	    implement: ITopBarControlFactory
+	loginPanel:
+	    implement: ILoginPanelFactory

@@ -1,5 +1,5 @@
 <?php
-class TopBarControl extends \Nette\Application\UI\Control {
+class LoginPanelControl extends \Nette\Application\UI\Control {
     
     public function render()
     {
@@ -8,10 +8,10 @@ class TopBarControl extends \Nette\Application\UI\Control {
     }
 }
 
-interface ITopBarControlFactory
+interface ILoginPanelFactory
 {
     	/**
-	 * @return TopBarControl
+	 * @return LoginPanelControl
 	 */
 	function create();
 }
